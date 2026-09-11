@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+
+:root {
+    --navy: #14213d;
+    --blue: #2c5f8f;
+    --ink: #263238;
+    --line: #dce3ea;
+    --paper: #ffffff;
+    --surface: #f4f7fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--surface);
+}
+
+body {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 28px auto;
+    padding: 0 12mm 0 73mm;
+    color: var(--ink);
+    background: linear-gradient(to right, var(--navy) 0 61mm, var(--paper) 61mm 100%);
+    font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-size: 12.5px;
+    line-height: 1.55;
+    position: relative;
+    box-shadow: 0 8px 28px rgba(20, 33, 61, .16);
+}
+
+.profile-header,
+.profile-photo,
+.personal-information,
+.contact {
+    color: #eef5fb;
+}
+
+.profile-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 61mm;
+    padding: 13mm 7mm 6mm;
+}
+
+.profile-header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+
+.profile-header p {
+    margin: 4px 0 0;
+    color: #a8c7e5;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.profile-photo {
+    position: absolute;
+    top: 43mm;
+    left: 8mm;
+    width: 45mm;
+}
+
+.profile-photo img {
+    display: block;
+    width: 100%;
+    height: 45mm;
+    border: 4px solid rgba(255, 255, 255, .22);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section {
+    padding: 5mm 0;
+    background: var(--paper);
+}
+
+.introduce {
+    padding-top: 12mm;
+}
+
+.personal-information {
+    position: absolute;
+    top: 105mm;
+    left: 0;
+    width: 61mm;
+    padding: 0 7mm;
+    background: transparent;
+}
+
+h2 {
+    margin: 0 0 8px;
+    padding-bottom: 5px;
+    color: var(--navy);
+    border-bottom: 2px solid var(--blue);
+    font-size: 16px;
+    letter-spacing: -.4px;
+}
+
+.personal-information h2,
+.contact h2 {
+    color: #fff;
+    border-color: #76a9d6;
+}
+
+h3 {
+    margin: 16px 0 7px;
+    color: var(--blue);
+    font-size: 13px;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+li + li {
+    margin-top: 3px;
+}
+
+.personal-information ul {
+    padding: 0;
+    list-style: none;
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.personal-information li {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, .16);
+}
+
+table {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+th,
+td {
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    color: var(--navy);
+    background: #edf3f8;
+    font-weight: 700;
+}
+
+td:first-child {
+    font-weight: 600;
+}
+
+.contact {
+    position: absolute;
+    top: 245mm;
+    left: 0;
+    width: 61mm;
+    padding: 0 7mm;
+    background: transparent;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.contact p + p {
+    margin-top: 6px;
+}
+
+a {
+    color: inherit;
+    text-decoration-color: #76a9d6;
+    text-underline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    body {
+        width: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0 20px 32px;
+        background: var(--paper);
+        box-shadow: none;
+    }
+
+    body::before {
+        display: block;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 316px;
+        background: var(--navy);
+    }
+
+    .profile-header,
+    .profile-photo,
+    .personal-information,
+    .contact {
+        position: static;
+        width: auto;
+    }
+
+    .profile-header {
+        padding: 35px 0 12px;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin: 0 auto;
+    }
+
+    .profile-photo img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    .personal-information,
+    .contact {
+        padding: 26px 0;
+        color: var(--ink);
+        background: var(--paper);
+    }
+
+    .personal-information h2,
+    .contact h2 {
+        color: var(--navy);
+        border-color: var(--blue);
+    }
+
+    .personal-information ul {
+        font-size: 14px;
+    }
+
+    .personal-information li {
+        border-color: var(--line);
+    }
+
+    section {
+        padding: 24px 0;
+    }
+
+    .introduce {
+        padding-top: 28px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+        font-size: 13px;
+    }
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    body {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        box-shadow: none;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
